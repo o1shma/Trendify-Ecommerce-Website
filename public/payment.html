@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Trendify - Payment</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="assets/images/logo.png" alt="Trendify" height="40">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto align-items-center">
+          <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="register.html">Register</a></li>
+          <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+        <li class="nav-item">
+  <a class="nav-link position-relative" href="cart.html">
+    Cart <span id="cartCount" class="badge bg-primary rounded-pill">0</span>
+  </a>
+</li>
+		</ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container py-4">
+    <h2>Checkout</h2>
+    <form id="paymentForm" novalidate>
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <label class="form-label">Full name</label>
+          <input type="text" id="cardName" class="form-control" required>
+          <div class="invalid-feedback">Enter name on card.</div>
+        </div>
+        <div class="col-md-6 mb-3">
+          <label class="form-label">Card number</label>
+          <input type="text" id="cardNumber" class="form-control" minlength="12" maxlength="19" required>
+          <div class="invalid-feedback">Enter a valid card number.</div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3 mb-3">
+          <label class="form-label">Expiry</label>
+          <input type="month" id="cardExp" class="form-control" required>
+          <div class="invalid-feedback">Enter expiry.</div>
+        </div>
+        <div class="col-md-3 mb-3">
+          <label class="form-label">CVV</label>
+          <input type="password" id="cardCvv" class="form-control" minlength="3" maxlength="4" required>
+          <div class="invalid-feedback">Enter CVV.</div>
+        </div>
+      </div>
+
+      <button class="btn btn-success" type="submit">Pay Now</button>
+    </form>
+  </div>
+<footer class="bg-dark text-white py-4 mt-5">
+  <div class="container text-center">
+    <p class="mb-2">
+      <a href="about.html" class="footer-link">About Us</a> |
+      <a href="contact.html" class="footer-link">Contact Us</a> |
+      <a href="privacy.html" class="footer-link">Privacy Policy</a> |
+      <a href="terms.html" class="footer-link">Terms & Conditions</a>
+    </p>
+    <p class="mb-0">&copy; <span id="year"></span> Trendify</p>
+  </div>
+</footer>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/scripts.js"></script>
+</body>
+</html>
